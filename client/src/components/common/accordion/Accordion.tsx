@@ -7,7 +7,7 @@ import { FC, useState } from 'react';
 
 interface AccordionProps {
     titre: string;
-    children: JSX.Element;
+    children: JSX.Element | React.ReactNode;
     defaultOpen?: boolean;
 }
 

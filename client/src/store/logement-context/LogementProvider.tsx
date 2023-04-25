@@ -38,7 +38,6 @@ const LogementProvider: FC<Props> = ({ children }: Props) => {
     }
     const getLogement = async (id: string): Promise<any> => {
         try {
-            console.log('function called')
             const res = await getLogementProvider(id);
             dispatch({
                 type: ActionTypes.GET_LOGEMENT,

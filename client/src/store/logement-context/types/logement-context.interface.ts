@@ -6,6 +6,6 @@ export interface LogementContextInterface {
     logement: Logement | null,
     loading: boolean,
     errors: [] | null,
-    getLogements: () => {},
-    getLogement: (id: string) => {},
+    getLogements: () => void,
+    getLogement: (id: string) => void,
 }
