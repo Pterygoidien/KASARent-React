@@ -1,4 +1,5 @@
 export enum ActionTypes {
     GET_LOGEMENTS = "GET_LOGEMENTS",
     GET_LOGEMENT = "GET_LOGEMENT",
+    SET_ERRORS = "SET_ERRORS",
 }

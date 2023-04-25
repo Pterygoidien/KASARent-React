@@ -16,6 +16,7 @@ const LogementProvider: FC<Props> = ({ children }: Props) => {
         logements: [],
         logement: null,
         loading: true,
+        errors: null
     }
     const [state, dispatch] = useReducer(LogementReducer, initialState);
 
@@ -28,7 +29,10 @@ const LogementProvider: FC<Props> = ({ children }: Props) => {
             });
         }
         catch (err) {
-            throw err;
+            dispatch({
+                type: ActionTypes.SET_ERRORS,
+                payload: err,
+            })
         }
 
     }
@@ -42,7 +46,10 @@ const LogementProvider: FC<Props> = ({ children }: Props) => {
             });
         }
         catch (err) {
-            throw err;
+            dispatch({
+                type: ActionTypes.SET_ERRORS,
+                payload: err,
+            })
         }
     }
 
@@ -52,7 +59,8 @@ const LogementProvider: FC<Props> = ({ children }: Props) => {
             logement: state.logement,
             loading: state.loading,
             getLogements,
-            getLogement
+            getLogement,
+            errors: state.errors
         }}>
             {children}
         </LogementContext.Provider>

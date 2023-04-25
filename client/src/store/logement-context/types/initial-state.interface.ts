@@ -4,4 +4,5 @@ export type logementInitialStateType = {
     logements: Logement[] | [],
     logement: Logement | null,
     loading: boolean,
+    errors: [] | null
 }

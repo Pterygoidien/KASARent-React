@@ -18,6 +18,13 @@ const logementReducer = (state: logementInitialStateType, action: ActionInterfac
                 logement: action.payload,
                 loading: false
             }
+        case ActionTypes.SET_ERRORS:
+            return {
+                ...state,
+                errors: action.payload,
+                loading: false
+            }
+
         default:
             return state;
     }
