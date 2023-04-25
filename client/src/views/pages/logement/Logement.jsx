@@ -1,5 +1,6 @@
-import { redirect, useParams } from "react-router-dom";
-import { useState, useContext, useEffect } from "react";
+import { useParams, useNavigate } from "react-router-dom";
+import { useContext, useEffect } from "react";
+
 
 
 import styles from "./Logement.module.scss";
@@ -16,8 +17,7 @@ import Spinner from "../../../components/layout/Spinner";
 const Logement = () => {
     const id = useParams().id;
     const { getLogement, logement, loading } = useContext(LogementContext);
-
-
+    const navigate = useNavigate();
 
     useEffect(() => {
         getLogement(id)
@@ -26,9 +26,9 @@ const Logement = () => {
 
     if (loading) return <Spinner />
     if (!loading && !logement) {
-        return <Error404 />
-    }
 
+        navigate('/404', { replace: true }); //or use "redirect"
+    }
     return (
         <main className="container">
             {logement && (

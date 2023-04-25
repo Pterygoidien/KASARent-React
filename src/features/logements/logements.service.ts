@@ -623,6 +623,7 @@ const logements = [
 @Injectable()
 export class LogementsService {
     async getLogements() {
+
         return logements;
     }
 
