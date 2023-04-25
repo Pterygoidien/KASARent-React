@@ -1,0 +1,11 @@
+ .banner {
+     background-image: url('../../../assets/images/banner.png');
+     background-color: rgba(0, 0, 0, 0.4);
+     background-blend-mode: multiply;
+     background-size: 100%;
+     background-repeat: no-repeat;
+     background-position: 50% 50%;
+     mix-blend-mode: darken;
+     padding: 50px 16px;
+     border-radius: 10px;
+ }

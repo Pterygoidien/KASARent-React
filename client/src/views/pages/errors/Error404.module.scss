@@ -1,0 +1,18 @@
+.error {
+    transform: scaleX(1.02);
+    padding: 2rem;
+
+    h1 {
+        font-size: 29em;
+        font-weight: 700;
+    }
+
+    h2 {
+        font-size: 3em;
+
+    }
+
+    @media screen and (max-width: 800px) {
+        font-size: 2vw;
+    }
+}

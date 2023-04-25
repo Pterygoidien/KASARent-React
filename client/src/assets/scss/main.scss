@@ -1,0 +1,25 @@
+/* Author : Bertrand Bouillon (bertrand.bouillon@gmail.com)
+/* 
+/* README : 
+/* 1. Resetting CSS (padding & margin for all CSS-blocks) 
+/* 2. Setting universal root-elements (box-sizing as border-box, parent font-size & color, img at 100% width)
+/* 3. Importing utilities and components that control every page
+/* 4. For each individual page, its specific elements are separated in an other scss file (home.scss, course-item.scss, etc.) imported in the React-component
+*/
+
+/* CSS Class names follow the BEM convention : Block-Element-Modifiers */
+
+//Importing configuration file : universal variables (primary color, secondary color, root font-size, etc.)
+
+@import "./base/config.scss";
+
+/* 1. Resetting CSS */
+@import "./base/reset.scss";
+/* 2. Setting universal root-elements */
+
+/* 3. Importing utilities and components that control every page */
+@import "./base/fonts.scss";
+@import "./layout/display.scss";
+@import "./layout/general.scss";
+
+@import "./utils/border.scss";

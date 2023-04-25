@@ -1,0 +1,63 @@
+.rounded {
+    border-radius: 0.25rem;
+}
+
+.rounded-none {
+    border-radius: 0;
+}
+
+$dimensions: (
+    "sm":0.125rem,
+    "lg":0.5rem,
+    "xl":0.75rem,
+    "2xl":1rem,
+    "3xl":1.5rem
+);
+
+@each $key,
+$value in $dimensions {
+    .rounded-#{$key} {
+        border-radius: $value;
+    }
+
+    .rounded-t-#{$key} {
+        border-top-left-radius: $value;
+        border-top-right-radius: $value;
+    }
+
+    .rounded-b-#{$key} {
+        border-bottom-left-radius: $value;
+        border-bottom-right-radius: $value;
+    }
+
+    .rounded-l-#{$key} {
+        border-top-left-radius: $value;
+        border-bottom-left-radius: $value;
+    }
+
+    .rounded-r-#{$key} {
+        border-top-right-radius: $value;
+        border-bottom-right-radius: $value;
+    }
+
+    .rounded-tl-#{$key} {
+        border-top-left-radius: $value;
+    }
+
+    .rounded-tr-#{$key} {
+        border-top-right-radius: $value;
+    }
+
+    .rounded-bl-#{$key} {
+        border-bottom-left-radius: $value;
+    }
+
+    .rounded-br-#{$key} {
+        border-bottom-right-radius: $value;
+    }
+}
+
+
+.rounded-full {
+    border-radius: 100%;
+}
