@@ -15,13 +15,9 @@ interface AccordionProps {
 
 const Accordion: FC<AccordionProps> = ({ titre, children, defaultOpen = true }) => {
     const [isOpen, setIsOpen] = useState(defaultOpen);
+    const toggleOpen = () => setIsOpen(!isOpen);
 
-    const toggleOpen = () => {
-        setIsOpen(!isOpen);
-    }
-
-
-    return (<article className={styles.accordion}>
+    return <article className={styles.accordion}>
         <Button
             className="text-left w-full flex items-center justify-between"
             onClick={toggleOpen}
@@ -33,7 +29,7 @@ const Accordion: FC<AccordionProps> = ({ titre, children, defaultOpen = true }) 
 
             {children}
         </div>
-    </ article >);
+    </ article >;
 }
 
 Accordion.defaultProps = {

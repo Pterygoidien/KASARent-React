@@ -18,18 +18,15 @@ const SlideshowIndex = styled.div<SlideshowIndexProps>`
     width:100%;
 }`
 
-
 const Carousel: FC<CarouselProps> = ({ pictures }): JSX.Element => {
     const [current, setCurrent] = useState(0);
     const prevHandler = () => {
-        if (current > 0) {
-            setCurrent(current - 1);
-        }
+        if (current > 0) setCurrent(current - 1);
+        return;
     }
     const nextHandler = () => {
-        if (current < pictures.length - 1) {
-            setCurrent(current + 1);
-        }
+        if (current < pictures.length - 1) setCurrent(current + 1);
+        return;
     }
 
     return (

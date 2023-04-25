@@ -3,13 +3,10 @@ import { FC } from 'react';
 
 
 interface ButtonProps {
-
     children: React.ReactNode;
     className?: string;
     onClick?: () => void;
 }
-
-
 
 const Button: FC<ButtonProps> = ({ children, className, onClick }) => {
     return (
