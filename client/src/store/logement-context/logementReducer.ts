@@ -10,13 +10,15 @@ const logementReducer = (state: logementInitialStateType, action: ActionInterfac
             return {
                 ...state,
                 logements: action.payload,
-                loading: false
+                loading: false,
+                errors: null,
             }
         case ActionTypes.GET_LOGEMENT:
             return {
                 ...state,
                 logement: action.payload,
-                loading: false
+                loading: false,
+                errors: null,
             }
         case ActionTypes.SET_ERRORS:
             return {

@@ -7,6 +7,7 @@ import Accordion from "../../../components/common/accordion/Accordion";
 import Rating from "../../../components/common/rating/Rating";
 import LogementContext from "../../../store/logement-context/logementContext";
 import Spinner from "../../../components/layout/Spinner";
+import Error404 from "../errors/Error404";
 
 
 const LogementPage: FC = () => {
@@ -18,9 +19,23 @@ const LogementPage: FC = () => {
     useEffect(() => {
         id && logementContext?.getLogement(id)
         // eslint-disable-next-line
+
     }, []);
 
-    if (!logementContext?.loading && !logementContext?.logement) navigate('/404', { replace: true }); //or use "redirect"
+    useEffect(() => {
+        if (!logementContext?.loading && logementContext?.errors) {
+            console.log(logementContext)
+            navigate('/404', {
+                replace: true,
+
+            }); //or use "redirect"
+        }
+
+
+        // eslint-disable-next-line
+    }, [logementContext?.errors])
+
+    if (logementContext?.loading) return (<Spinner />)
     if (logementContext?.logement && !logementContext.loading) {
         const { title, location, pictures, tags, rating, host, description, equipments } = logementContext.logement; //destructuring logementContext.logement once we've checked that it's not null
         return (
@@ -28,7 +43,7 @@ const LogementPage: FC = () => {
                 {logementContext?.logement && (
                     <>
                         <Carousel pictures={pictures} />
-                        <div className="flex flex-expand items-center">
+                        <div className={styles['rental-general']}>
                             <section className="rental-highlight flex flex-col gap-4">
                                 <h1>
                                     {title}
@@ -43,7 +58,7 @@ const LogementPage: FC = () => {
                                 </div>
 
                             </section>
-                            <section className={`${styles['rental-infos']} flex justify-between items-center`}>
+                            <section className={styles['rental-infos']}>
                                 <div className="rental-infos__rating flex grow">
 
                                     <Rating value={rating} />
@@ -80,7 +95,7 @@ const LogementPage: FC = () => {
             </main>
         )
     }
-    return <Spinner />
+    return <Error404 />
 
 }
 

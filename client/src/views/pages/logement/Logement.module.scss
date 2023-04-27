@@ -1,3 +1,5 @@
+@import "../../../assets/scss/base/config";
+
 .rental-carousel {
   img {
     height: 400px;
@@ -14,8 +16,34 @@
   overflow: hidden;
 }
 
+.rental-general {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+
+  flex-wrap: nowrap;
+
+  &>section {
+
+    flex-grow: 1;
+  }
+
+  @media screen and (max-width: $screen-md) {
+    flex-direction: column;
+    align-items: start;
+
+  }
+
+}
+
 .rental-infos {
-  @media screen and (min-width: 872px) {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+
+  @media screen and (min-width: $screen-md) {
     flex-direction: column-reverse;
     align-items: end;
   }
