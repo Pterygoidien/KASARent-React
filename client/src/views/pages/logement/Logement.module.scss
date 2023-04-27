@@ -19,20 +19,16 @@
 .rental-general {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  flex-direction: row;
-
-  flex-wrap: nowrap;
+  align-items: stretch;
+  flex-direction: column;
 
   &>section {
-
     flex-grow: 1;
   }
 
-  @media screen and (max-width: $screen-md) {
-    flex-direction: column;
-    align-items: start;
 
+  @media screen and (min-width: $screen-md) {
+    flex-direction: row;
   }
 
 }
@@ -41,7 +37,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
+
 
   @media screen and (min-width: $screen-md) {
     flex-direction: column-reverse;
