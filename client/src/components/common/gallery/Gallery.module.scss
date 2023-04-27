@@ -1,9 +1,8 @@
-@import "../../../assets/scss/base/config";
+@import '../../../assets/scss/base/config';
 
 .gallery {
-    @media screen and (min-width:$screen-lg ) {
-        background-color: $secondary-color;
-        padding: 2rem;
-    }
-
+  @media screen and (min-width: $screen-lg) {
+    background-color: $secondary-color;
+    padding: 2.5rem;
+  }
 }

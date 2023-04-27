@@ -1,16 +1,16 @@
 .item {
-    height: min(225px);
-    min-width: 280px;
-    max-width: 600px;
-    background: var(--primary-color);
-    background-size: cover;
-    background-position: center;
-    border-radius: 10px;
-    position: relative;
+  height: min(225px);
+  min-width: 230px;
+  max-width: 600px;
+  background: var(--primary-color);
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  position: relative;
 
-    h2 {
-        position: absolute;
-        bottom: 10px;
-        left: 10px;
-    }
+  h2 {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+  }
 }
