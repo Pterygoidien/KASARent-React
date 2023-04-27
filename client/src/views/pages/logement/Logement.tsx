@@ -81,8 +81,8 @@ const LogementPage: FC = () => {
                         </div>
 
                         <section className={`${styles['rental-accordions']} flex flex-responsive items-stretch gap-4`}>
-                            <Accordion titre="Description"><p>{description}</p></Accordion>
-                            <Accordion titre="Equipements">
+                            <Accordion titre="Description" defaultOpen={false}><p>{description}</p></Accordion>
+                            <Accordion titre="Equipements" defaultOpen={false}>
                                 {equipments ? (
                                     <ul className="p-1">
                                         {equipments.map((equipment) => {

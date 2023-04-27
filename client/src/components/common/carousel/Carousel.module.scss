@@ -5,6 +5,8 @@
   border-radius: 10px;
   overflow: hidden;
   position: relative;
+
+
   @media screen and (min-width: 1100px) {
     height: 450px;
   }
@@ -34,4 +36,14 @@
 .prev {
   left: 10px;
   transform: rotate(90deg);
+}
+
+.caption {
+  color: #fff;
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  font-size: 20px;
+  font-weight: 400;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }

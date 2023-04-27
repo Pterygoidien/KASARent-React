@@ -12,7 +12,7 @@ interface AccordionProps {
 const Accordion: FC<AccordionProps> = ({
   titre,
   children,
-  defaultOpen = true,
+  defaultOpen = false,
 }) => {
   const [isOpen, setIsOpen] = useState(defaultOpen);
   const toggleOpen = () => setIsOpen(!isOpen);
@@ -24,12 +24,11 @@ const Accordion: FC<AccordionProps> = ({
         onClick={toggleOpen}
       >
         <h2>{titre}</h2>
-        <Arrow />
+        <Arrow direction={!isOpen ? 90 : 0} />
       </Button>
       <div
-        className={`${styles.accordion__content} rounded-b-xl ${
-          isOpen ? styles.open : ''
-        }`}
+        className={`${styles.accordion__content} rounded-b-xl ${isOpen ? styles.open : ''
+          }`}
       >
         {children}
       </div>

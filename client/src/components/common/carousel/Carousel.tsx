@@ -9,14 +9,18 @@ interface CarouselProps {
 
 interface SlideshowIndexProps {
     current: number;
+
 }
 
 const SlideshowIndex = styled.div<SlideshowIndexProps>`
 .slideshow {
+    position:relative;
     transform: translateX(-${(props) => props.current * 100}%);
     transition: transform 0.5s ease-in-out;
     width:100%;
-}`
+}
+    
+`
 
 const Carousel: FC<CarouselProps> = ({ pictures }): JSX.Element => {
     const [current, setCurrent] = useState(0);
@@ -42,7 +46,13 @@ const Carousel: FC<CarouselProps> = ({ pictures }): JSX.Element => {
                 <div className={`${styles.next} ${(current >= (pictures.length - 1)) ? 'hidden' : ''}`} onClick={nextHandler}>
                     <Arrow />
                 </div>
+
+                <caption className={styles.caption}>
+                    {current + 1} / {pictures.length}
+                </caption>
+
             </section>
+
         </SlideshowIndex>
     );
 }
