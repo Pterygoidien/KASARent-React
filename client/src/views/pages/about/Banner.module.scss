@@ -1,11 +1,20 @@
+@import '../../../assets/scss/base/config';
+
 .banner {
   background-image: url('../../../assets/images/banner__about.png');
+  background-size: cover;
   background-color: rgba(0, 0, 0, 0.4);
   background-blend-mode: multiply;
-  background-size: 100%;
+
   background-repeat: no-repeat;
   background-position: 50% 50%;
   mix-blend-mode: darken;
   padding: 50px 16px;
-  border-radius: 10px;
+  border-radius: 25px;
+  height: 150px;
+  margin-bottom: 2rem;
+  @media screen and (max-width: $screen-md) {
+    height: 280px;
+    border-radius: 10px;
+  }
 }

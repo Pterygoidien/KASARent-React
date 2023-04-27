@@ -1,26 +1,26 @@
 .rental-carousel {
-    img {
-        height: 400px;
-        object-fit: cover;
-        width: 100%;
-    }
+  img {
+    height: 400px;
+    object-fit: cover;
+    width: 100%;
+  }
 }
 
 .author__picture {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
 
-    overflow: hidden;
+  overflow: hidden;
 }
 
 .rental-infos {
-    @media screen and (min-width: 890px) {
-        flex-direction: column-reverse;
-        align-items: end;
-    }
+  @media screen and (min-width: 872px) {
+    flex-direction: column-reverse;
+    align-items: end;
+  }
 }
 
 .rental-accordions {
-    position: relative;
+  position: relative;
 }

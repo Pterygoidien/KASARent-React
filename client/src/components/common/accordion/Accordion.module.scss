@@ -1,31 +1,33 @@
 .accordion {
-    h3 {
-        color: #ffffff;
+  h3 {
+    color: #ffffff;
+  }
+
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+
+  svg {
+    width: 30px;
+    fill: #fff;
+  }
+
+  &__content {
+    background-color: var(--secondary-color);
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.5s ease;
+    flex-grow: 1;
+    line-height: 1.5rem;
+
+    p {
+      padding: 1rem;
+      margin-top: 0.9rem;
+      margin-bottom: 0.5rem;
     }
+  }
 
-    display:flex;
-    flex-direction: column;
-    align-items: stretch;
-
-    svg {
-        width: 30px;
-        fill: #fff;
-    }
-
-    &__content {
-        background-color: var(--secondary-color);
-        max-height: 0;
-        overflow: hidden;
-        transition: all 0.5s ease;
-        flex-grow: 1;
-
-        p {
-            padding: 1rem;
-        }
-    }
-
-    .open {
-        max-height: 100vh;
-    }
-
+  .open {
+    max-height: 100vh;
+  }
 }
