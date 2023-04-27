@@ -24,7 +24,6 @@ const logementReducer = (state: logementInitialStateType, action: ActionInterfac
                 errors: action.payload,
                 loading: false
             }
-
         default:
             return state;
     }

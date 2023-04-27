@@ -6,7 +6,7 @@ import Error404 from "../pages/errors/Error404";
 import Logement from "../pages/logement/Logement";
 
 
-const AppRoutes: FC = () => {
+export default function AppRoutes(): JSX.Element {
     return (
         <Routes>
             <Route path="/" element={<Home />} />
@@ -17,4 +17,3 @@ const AppRoutes: FC = () => {
     );
 };
 
-export default AppRoutes;

@@ -1,5 +1,3 @@
-
-
 import { FC } from 'react';
 import Accordion from '../../../components/common/accordion/Accordion';
 import Banner from '../../../components/common/banner/Banner';
