@@ -8,4 +8,10 @@
   mix-blend-mode: darken;
   padding: 50px 16px;
   border-radius: 10px;
+
+  & > h1 {
+    @media screen and (min-width: 800px) {
+      justify-content: center;
+    }
+  }
 }

@@ -1,202 +1,192 @@
 .container {
-    max-width: var(--screen-lg);
-    width: 100%;
-    margin: 0 auto;
-    padding: 1rem;
+  max-width: var(--screen-lg);
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 2rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 /*width containers*/
 .w-full,
 .w-100 {
-    width: 100%;
+  width: 100%;
 }
 
 .w-max-full,
 .w-max-100 {
-    max-width: 100%;
-    overflow-x: hidden;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 /*margins and paddings*/
 
 .mx-auto {
-    margin: 0 auto;
+  margin: 0 auto;
 }
 
-$spaceamounts: (
-    1,
-    2,
-    3,
-    4,
-    5
-);
+$spaceamounts: (1, 2, 3, 4, 5);
 
 @each $space in $spaceamounts {
-    .m-#{$space} {
-        margin: #{$space}rem;
-    }
+  .m-#{$space} {
+    margin: #{$space}rem;
+  }
 
-    .my-#{$space} {
-        margin: #{$space}rem 0;
-    }
+  .my-#{$space} {
+    margin: #{$space}rem 0;
+  }
 
-    .mx-#{$space} {
-        margin: 0 #{$space}rem;
-    }
+  .mx-#{$space} {
+    margin: 0 #{$space}rem;
+  }
 
-    .p-#{$space} {
-        padding: #{$space}rem;
-    }
+  .p-#{$space} {
+    padding: #{$space}rem;
+  }
 
-    .py-#{$space} {
-        padding: #{$space}rem 0;
-    }
+  .py-#{$space} {
+    padding: #{$space}rem 0;
+  }
 
-    .px-#{$space} {
-        padding: 0 #{$space}rem;
-    }
+  .px-#{$space} {
+    padding: 0 #{$space}rem;
+  }
 
-    .mb-#{$space} {
-        margin-bottom: #{$space}rem;
-    }
+  .mb-#{$space} {
+    margin-bottom: #{$space}rem;
+  }
 }
 
 /* grid display */
 .grid {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    grid-gap: 1rem;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-gap: 1rem;
 }
 
 /* flex display*/
-@import "./flex.scss";
+@import './flex.scss';
 
 $spacegaps: (
-    0:0rem,
-    1:0.25rem,
-    2:0.5rem,
-    3:0.75rem,
-    4:1rem,
-    5:1.25rem,
-    6:1.5rem,
-    7:1.75rem,
-    8:2rem,
-    9:2.25rem,
-    10:2.5rem,
-    11:2.75rem,
-    12:3rem,
-    13:3.5rem,
-
+  0: 0rem,
+  1: 0.25rem,
+  2: 0.5rem,
+  3: 0.75rem,
+  4: 1rem,
+  5: 1.25rem,
+  6: 1.5rem,
+  7: 1.75rem,
+  8: 2rem,
+  9: 2.25rem,
+  10: 2.5rem,
+  11: 2.75rem,
+  12: 3rem,
+  13: 3.5rem,
 );
 
-@each $n,
-$value in $spacegaps {
-    .gap-#{$n} {
-        gap: #{$value};
-    }
+@each $n, $value in $spacegaps {
+  .gap-#{$n} {
+    gap: #{$value};
+  }
 }
-
-
-
 
 /* Justify content*/
 .justify-start {
-    justify-content: flex-start;
+  justify-content: flex-start;
 }
 
 .justify-end {
-    justify-content: flex-end;
+  justify-content: flex-end;
 }
 
 .justify-center {
-    justify-content: center;
+  justify-content: center;
 }
 
 .justify-between {
-    justify-content: space-between;
+  justify-content: space-between;
 }
 
 .justify-around {
-    justify-content: space-around;
+  justify-content: space-around;
 }
 
 .justify-evenly {
-    justify-content: space-evenly;
+  justify-content: space-evenly;
 }
 
 /* Align items*/
 .items-start {
-    align-items: flex-start;
+  align-items: flex-start;
 }
 
 .items-end {
-    align-items: flex-end;
+  align-items: flex-end;
 }
 
 .items-center {
-    align-items: center;
+  align-items: center;
 }
 
 .items-baseline {
-    align-items: baseline;
+  align-items: baseline;
 }
 
 .items-stretch {
-    align-items: stretch;
+  align-items: stretch;
 }
 
 /* Align content*/
 .content-start {
-    align-content: flex-start;
+  align-content: flex-start;
 }
 
 .content-end {
-    align-content: flex-end;
+  align-content: flex-end;
 }
 
 .content-center {
-    align-content: center;
+  align-content: center;
 }
 
 .content-between {
-    align-content: space-between;
+  align-content: space-between;
 }
 
 .content-around {
-    align-content: space-around;
+  align-content: space-around;
 }
 
 .content-evenly {
-    align-content: space-evenly;
+  align-content: space-evenly;
 }
 
 /* Align self*/
 .self-start {
-    align-self: flex-start;
+  align-self: flex-start;
 }
 
 .self-end {
-    align-self: flex-end;
+  align-self: flex-end;
 }
 
 .self-center {
-    align-self: center;
+  align-self: center;
 }
 
 .self-baseline {
-    align-self: baseline;
+  align-self: baseline;
 }
 
 .self-stretch {
-    align-self: stretch;
+  align-self: stretch;
 }
-
 
 /*Displays*/
 .hidden {
-    visibility: hidden;
+  visibility: hidden;
 }
 
 .no-display {
-    display: none;
+  display: none;
 }
